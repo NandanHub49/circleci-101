@@ -27,6 +27,9 @@ jobs:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
+  - add_ssh_keys:
+      fingerprints:
+        - "04:0e:97:92:79:a3:da:58:5d:85:0d:f2:d0:20:0a:7b"   
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
           at: my_workspace
